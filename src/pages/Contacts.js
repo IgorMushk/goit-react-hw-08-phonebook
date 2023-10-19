@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-//import { selectLoading } from 'redux/tasks/selectors';
 import { Container, Title, TitleList } from 'components/App.styled';
 import ScrollToTop from 'react-scroll-to-top';
 import { ContactForm } from 'components/ContactForrm/ContactForm';
@@ -14,13 +13,6 @@ import { AiOutlineArrowUp } from 'react-icons/ai';
 // import { Helmet } from 'react-helmet';
 
 export default function Tasks() {
-  //   const dispatch = useDispatch();
-  //   const isLoading = useSelector(selectLoading);
-
-  //   useEffect(() => {
-  //     dispatch(fetchTasks());
-  //   }, [dispatch]);
-
   const dispatch = useDispatch();
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
