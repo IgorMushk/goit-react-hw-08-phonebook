@@ -1,16 +1,7 @@
-import { Container, Title, TitleList } from './App.styled';
-import { ContactList } from './ContactList/ContactList';
-import { FilterByName } from './Filter/FilterByName';
-import { ContactForm } from './ContactForrm/ContactForm';
-import { useDispatch, useSelector } from 'react-redux';
+
+import { useDispatch } from 'react-redux';
 import { lazy, useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { Loader } from './Loader/Loader';
-import { getError, getIsLoading } from 'redux/selectors';
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ScrollToTop from 'react-scroll-to-top';
-import { AiOutlineArrowUp } from 'react-icons/ai';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { useAuth } from 'hooks';
