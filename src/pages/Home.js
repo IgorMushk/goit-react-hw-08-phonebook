@@ -16,10 +16,7 @@ const styles = {
     return (
       <div style={styles.container}>
         <h1 style={styles.title}>
-          Contacts manager welcome page{' '}
-          <span role="img" aria-label="Greeting icon">
-            💁‍♀️
-          </span>
+          Contacts manager welcome page
         </h1>
       </div>
     );
