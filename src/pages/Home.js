@@ -27,7 +27,7 @@ const styles = {
         <h1 style={styles.title}>
         Phonebook manager welcome page
         </h1>
-        {!isLoggedIn && <h2 style={styles.titleAuth}> Please Authorize...</h2>}
+        {!isLoggedIn && <h2 style={styles.titleAuth}> Please authorization ...</h2>}
       </div>
     );
   }

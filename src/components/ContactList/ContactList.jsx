@@ -1,8 +1,8 @@
 import { Button, Item, ItemText, List, Quantitas } from "./ContactList.styled.";
 import { useDispatch, useSelector } from 'react-redux';
 //import { delClient } from "redux/store";
-import { deleteContact } from "redux/operations";
-import { getContacts, getFilterValue, getIsLoading } from "redux/selectors";
+import { deleteContact } from "redux/contacts/operations";
+import { getContacts, getFilterValue, getIsLoading } from "redux/contacts/selectors";
 import { RotatingLines } from 'react-loader-spinner';
 
 export const ContactList = ({onDeleteContact}) => {
