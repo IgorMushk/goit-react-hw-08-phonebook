@@ -10,9 +10,7 @@ export const AppBar = () => {
   return (
     <header className={css.header}>
       <Navigation />
-      {/* {isLoggedIn ? <UserMenu /> : <AuthNav />} */}
-      <UserMenu />
-      <AuthNav />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
 };
