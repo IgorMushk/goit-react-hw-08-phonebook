@@ -8,11 +8,13 @@ import { fetchContacts } from 'redux/operations';
 import { Loader } from './Loader/Loader';
 import { getError, getIsLoading } from 'redux/selectors';
 import { ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
+import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from 'react-scroll-to-top';
-import { AiOutlineArrowUp } from "react-icons/ai";
+import { AiOutlineArrowUp } from 'react-icons/ai';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
+import { useAuth } from 'hooks';
+import { refreshUser } from 'redux/auth/operations';
 
 const HomePage = lazy(() => import('../pages/Home'));
 const RegisterPage = lazy(() => import('../pages/Register'));
@@ -20,22 +22,23 @@ const LoginPage = lazy(() => import('../pages/Login'));
 const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export function App() {
-  // const dispatch = useDispatch();
-  // const isLoading = useSelector(getIsLoading)
-  // const error = useSelector(getError)
-  
-  // useEffect(() => {
-  //   dispatch(fetchContacts());
-  // }, [dispatch]);
+  const dispatch = useDispatch();
+  const { isRefreshing } = useAuth();
 
-  return (
+  useEffect(() => {
+    dispatch(refreshUser());
+  }, [dispatch]);
+
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/contacts" element={<ContactsPage />} /> 
+        <Route path="/contacts" element={<ContactsPage />} />
       </Route>
-   </Routes>
+    </Routes>
   );
-  }
+}

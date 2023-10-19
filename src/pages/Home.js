@@ -1,5 +1,4 @@
 import { useAuth } from "hooks";
-import { selectIsLoggedIn } from "redux/auth/selectors";
 
 const styles = {
     container: {
