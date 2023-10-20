@@ -1,9 +1,11 @@
-import { Button, Item, ItemText, List, Quantitas } from "./ContactList.styled.";
+//import { Button, Item, ItemText, List, Quantitas } from "./ContactList.styled.";
+import { Button, Item, ItemText, List } from "./ContactList.styled.";
 import { useDispatch, useSelector } from 'react-redux';
 //import { delClient } from "redux/store";
 import { deleteContact } from "redux/contacts/operations";
-import { getContacts, getFilterValue, getIsLoading } from "redux/contacts/selectors";
-import { RotatingLines } from 'react-loader-spinner';
+//import { getContacts, getFilterValue, getIsLoading } from "redux/contacts/selectors";
+import { getContacts, getFilterValue } from "redux/contacts/selectors";
+//import { RotatingLines } from 'react-loader-spinner';
 
 export const ContactList = ({onDeleteContact}) => {
   const contacts  = useSelector(getContacts)
@@ -11,7 +13,7 @@ export const ContactList = ({onDeleteContact}) => {
   const dispatch = useDispatch();
   const filterValue = useSelector(getFilterValue);
   //console.log('ContactList-filter :>>', filterValue);
-  const isLoading = useSelector(getIsLoading)
+  //const isLoading = useSelector(getIsLoading)
 
   const getFilteredContats = () => {
     const filteredContats = contacts.filter(contact =>
@@ -20,7 +22,7 @@ export const ContactList = ({onDeleteContact}) => {
     return filteredContats;
   };
 
-  const quantitas = getFilteredContats().length;
+  // const quantitas = getFilteredContats().length;
 
  return  (
   <>
