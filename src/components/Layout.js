@@ -17,7 +17,7 @@ export const Layout = () => {
       {/* <Toaster position="top-right" reverseOrder={false} /> */}
       <Footer>
         <FooterText>
-          &copy; {new Date().getFullYear()} Phonebook manager
+          &copy; {new Date().getFullYear()} Phonebook manager ver. hw.08
         </FooterText>
       </Footer>
     </>
