@@ -27,9 +27,9 @@ export const ContactList = ({onDeleteContact}) => {
  return  (
   <>
 <List>
-{getFilteredContats().map(({id, name, phone}) => (
+{getFilteredContats().map(({id, name, number}) => (
 <Item key={id}>
-    <ItemText><span>{name} : </span><span>{phone}</span> </ItemText>
+    <ItemText><span>{name} : </span><span>{number}</span> </ItemText>
     <Button onClick={() => dispatch(deleteContact(id))}>Delete</Button> </Item>
     ))}
 </List>
