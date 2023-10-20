@@ -15,4 +15,8 @@ const FooterText = styled.p`
   margin: 0;
 `;
 
-export { Footer, FooterText };
+const MainContainer = styled.main`
+  margin: 0 auto;
+`;
+
+export { Footer, FooterText, MainContainer };
