@@ -3,7 +3,7 @@ import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'hooks';
 // import Button from '@mui/material/Button';
 import { IconButton } from '@mui/material';
-import { RiLogoutBoxRLine } from 'react-icons/ri';
+import { RiLogoutBoxRFill } from 'react-icons/ri';
 import css from './UserMenu.module.css';
 
 export const UserMenu = () => {
@@ -26,10 +26,10 @@ export const UserMenu = () => {
           }}
           onClick={() => dispatch(logOut())}
         >
-          <RiLogoutBoxRLine />
+          <RiLogoutBoxRFill/>
         </IconButton>
     </div>
   );
 };
 
-//1976D2 - rgb(25, 118, 210)
+//1976D2 - rgb(25, 118, 210) RiLogoutBoxRLine
