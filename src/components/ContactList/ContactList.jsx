@@ -31,7 +31,7 @@ export const ContactList = ({onDeleteContact}) => {
     <Button onClick={() => dispatch(deleteContact(id))}>Delete</Button> </Item>
     ))}
 </List>
-<Quantitas>
+{/* <Quantitas>
         Number of contacts:
         {isLoading ? (
           <RotatingLines
@@ -44,7 +44,7 @@ export const ContactList = ({onDeleteContact}) => {
         ) : (
           <span>{quantitas}</span>
         )}
-      </Quantitas>
+      </Quantitas> */}
 </>
 )};//
 
