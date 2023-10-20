@@ -34,7 +34,8 @@ export const Button = styled.button`
   &:focus {
     //border: 2px solid #94c0f9;
     cursor: pointer;
-    background-color: #51575e;
+    /* background-color: #51575e; */
+    background-color:#1976D2;
     color: white;
   }
 `;

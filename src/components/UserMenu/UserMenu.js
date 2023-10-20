@@ -22,7 +22,7 @@ export const UserMenu = () => {
           variant="contained"
           style={{
             backgroundColor: 'white',
-            color: 'rgb(25, 118, 210)',
+            color: '#1976D2',
           }}
           onClick={() => dispatch(logOut())}
         >
@@ -31,3 +31,5 @@ export const UserMenu = () => {
     </div>
   );
 };
+
+//1976D2 - rgb(25, 118, 210)
